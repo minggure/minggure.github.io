@@ -217,6 +217,13 @@
         letter-spacing: -0.015em;
         text-wrap: pretty;
       }
+      .hero-principles {
+        margin: 24px 0;
+        color: #000;
+      }
+      .hero-principles .hero-intro {
+        margin-bottom: 8px;
+      }
       .hero-links {
         display: flex;
         gap: 20px;
@@ -297,9 +304,6 @@
         margin-bottom: 48px;
         border-bottom: 1px solid var(--line);
         scroll-margin-top: 16px;
-      }
-      .intro p {
-        color: var(--ink);
       }
       .table-scroll {
         max-width: 100%;
@@ -926,6 +930,12 @@
             팀원과 소통하며 구현의 기준을 맞추고, 안정적인 서비스와 원활한
             협업을 중요하게 생각하는 개발자입니다.
           </p>
+          <div class="hero-principles">
+            <p class="hero-intro">팀원들과 소통하며 성공의 기준을 함께 정합니다.</p>
+            <p class="hero-intro">합의한 기준은 명확한 수치로 구체화합니다.</p>
+            <p class="hero-intro">장애 이후의 시스템 상태와 복구까지 고려합니다.</p>
+            <p class="hero-intro">측정 범위와 조건을 정하고 테스트로 검증합니다.</p>
+          </div>
           <div class="hero-links">
             <a href="#projects"
               >프로젝트 보기 <span aria-hidden="true">↓</span></a
@@ -949,7 +959,6 @@
       </div>
       <div class="layout">
         <nav class="sidebar" aria-label="페이지 목차">
-          <a href="#intro">소개</a>
           <a href="#skills">기술</a>
           <a href="#activity">활동·수상</a>
           <a href="#education">학력</a>
@@ -959,45 +968,6 @@
           <a href="#daenggo" class="sub">DAENGGO</a>
         </nav>
         <main id="content">
-          <section class="section intro" id="intro">
-            <h2>소개</h2>
-            <p>
-              팀 프로젝트에서는 API 요청값과 상태 변경 시점, 완료 조건을 먼저
-              맞춥니다. 서로 다르게 이해한 부분은 문서와 대화로 확인하고, 함께
-              만든 기능이 하나의 서비스로 연결되는 과정에서 보람을 느낍니다.
-            </p>
-            <p>
-              새로운 기술은 필요한 이유를 이해하고 적용하려 합니다. 쿠폰 발급과
-              좌석 예매를 개발하면서 임시 선점과 최종 완료의 기준을 구분하고,
-              장애가 났을 때 어떤 데이터를 기준으로 복구할지도 함께
-              고민했습니다.
-            </p>
-            <p>
-              구현한 동작은 로그와 테스트로 확인합니다. 성능 결과를 공유할 때도
-              쿼리와 API 응답, 서버와 부하 발생기, 트래픽이 서서히 늘어나는
-              경우와 한꺼번에 몰리는 경우를 구분해 측정 조건과 결과를 함께
-              설명합니다.
-            </p>
-            <div id="principles" style="color: #000">
-              <h3>제가 중요하게 보는 것</h3>
-              <p style="color: inherit">
-                <strong>성공의 기준을 하나로 정합니다.</strong><br />
-                Redis 선점과 DB 발급 완료를 섞지 않습니다.
-              </p>
-              <p style="color: inherit">
-                <strong>속도 수치에 측정 범위를 붙입니다.</strong><br />
-                Ramp와 Burst, 쿼리와 API, 서버와 부하 발생기를 구분합니다.
-              </p>
-              <p style="color: inherit">
-                <strong>구현 전에 서로의 기준을 맞춥니다.</strong><br />
-                API 요청값과 상태 변경 시점, 완료 조건을 먼저 공유하고 다르게 이해한 부분을 문서와 대화로 확인합니다.
-              </p>
-              <p style="color: inherit">
-                <strong>장애 뒤의 상태를 설계합니다.</strong><br />
-                실패 응답만 처리하지 않고 어떤 데이터를 기준으로 복구할지 정합니다.
-              </p>
-            </div>
-          </section>
           <section class="section" id="skills">
             <h2>기술과 사용 경험</h2>
             <div
