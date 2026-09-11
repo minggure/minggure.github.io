@@ -7,7 +7,7 @@
     <title>전민규 | Backend Engineering Portfolio</title>
     <meta
       name="description"
-      content="Java와 Spring Boot를 중심으로 동시성, 데이터 정합성, 장애 복구를 고민하는 백엔드 개발자 전민규의 포트폴리오. CLUTCH, DAENGGO, MINGPARK 프로젝트와 기술적 판단을 소개합니다."
+      content="Java와 Spring Boot를 중심으로 동시성, 데이터 정합성, 장애 복구를 고민하는 백엔드 개발자 전민규의 포트폴리오. CLUTCH, MINGPARK, DAENGGO 프로젝트와 기술적 판단을 소개합니다."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -22,6 +22,13 @@
     <meta property="og:locale" content="ko_KR" />
     <link rel="canonical" href="https://minggure.github.io/" />
     <style>
+      @font-face {
+        font-family: "SUIT";
+        src: url("assets/SUIT-Variable.woff2") format("woff2");
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
       :root {
         --ink: #27262b;
         --muted: #6d6a73;
@@ -44,8 +51,13 @@
         background: var(--paper);
         color: var(--ink);
         font-family:
-          -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans KR",
-          "Malgun Gothic", sans-serif;
+          "SUIT",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          "Noto Sans KR",
+          "Malgun Gothic",
+          sans-serif;
         font-size: 16px;
         line-height: 1.85;
         word-break: keep-all;
@@ -199,6 +211,11 @@
       .hero-intro {
         max-width: 620px;
         margin-bottom: 16px;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.8;
+        letter-spacing: -0.015em;
+        text-wrap: pretty;
       }
       .hero-links {
         display: flex;
@@ -709,7 +726,7 @@
           font-size: 14px;
         }
         .hero-intro {
-          font-size: 16px;
+          font-size: 18px;
         }
         .portrait {
           width: 100px;
@@ -810,7 +827,6 @@
         .topbar,
         .sidebar,
         .skip,
-        #print,
         .hero-links {
           display: none;
         }
@@ -887,11 +903,6 @@
             rel="noopener noreferrer"
             >GitHub ↗</a
           ><a
-            href="https://minggure.tistory.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Blog ↗</a
-          ><a
             class="source-link"
             href="https://www.notion.so/3cf09199440481d99843ee97e7080b35"
             target="_blank"
@@ -908,11 +919,12 @@
           <h1>전민규 <small>Jeon Mingyu</small></h1>
           <p class="role">Java · Spring Boot</p>
           <p class="hero-intro">
-            쿠폰 발급과 좌석 예매를 개발하며 동시성, 데이터 정합성, 장애 복구를
-            다뤘습니다.
+            쿠폰 발급과 좌석 예매를 구현하며 동시성, 데이터 정합성, 장애 복구를
+            고민해 왔습니다.
           </p>
           <p class="hero-intro">
-            팀원과의 협업과 커뮤니케이션을 중요하게 생각합니다.
+            팀원과 소통하며 구현의 기준을 맞추고, 안정적인 서비스와 원활한
+            협업을 중요하게 생각하는 개발자입니다.
           </p>
           <div class="hero-links">
             <a href="#projects"
@@ -943,8 +955,8 @@
           <a href="#skills">기술</a>
           <a href="#projects">프로젝트</a>
           <a href="#clutch" class="sub">CLUTCH</a>
-          <a href="#daenggo" class="sub">DAENGGO</a>
           <a href="#mingpark" class="sub">MINGPARK</a>
+          <a href="#daenggo" class="sub">DAENGGO</a>
         </nav>
         <main id="content">
           <section class="section intro" id="intro">
@@ -1060,23 +1072,6 @@
                 <div class="card-result">
                   20,000명 Ramp 테스트 · 10,000장 정확히 발급
                 </div></a
-              ><a class="project-card" href="#daenggo"
-                ><img
-                  class="project-thumb"
-                  src="assets/daenggo-dog.png"
-                  alt=""
-                  width="375"
-                  height="279"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <h3>DAENGGO</h3>
-                <p>반려견 커뮤니티 서비스</p>
-                <span class="project-role">커뮤니티 백엔드·배포 환경</span
-                ><span class="project-date">2026.07 · 4인</span>
-                <div class="card-result">
-                  게시글 · 댓글 · 이미지 · JWT 권한 검증
-                </div></a
               ><a class="project-card" href="#mingpark"
                 ><img
                   class="project-thumb"
@@ -1092,6 +1087,24 @@
                 <span class="project-role">팀장 / 좌석 선점·예매 백엔드</span
                 ><span class="project-date">2026.06.01–07.07 · 3인</span>
                 <div class="card-result">Redis SET NX · 좌석별 5분 TTL</div></a
+              ><a class="project-card" href="#daenggo"
+                ><img
+                  class="project-thumb"
+                  src="assets/daenggo-dog.png"
+                  alt=""
+                  width="375"
+                  height="279"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <h3>DAENGGO</h3>
+                <p>반려견 커뮤니티 서비스</p>
+                <span class="project-role"
+                  >팀장 / 커뮤니티 백엔드·배포 환경</span
+                ><span class="project-date">2026.07 · 4인</span>
+                <div class="card-result">
+                  게시글 · 댓글 · 이미지 · JWT 권한 검증
+                </div></a
               >
             </div>
           </section>
@@ -1373,83 +1386,6 @@
               </ul>
             </div>
           </section>
-          <section class="section" id="daenggo">
-            <div class="project-heading"><h2>DAENGGO</h2></div>
-            <p class="project-meta">
-              반려견 커뮤니티 서비스 &nbsp; / &nbsp; 2026.07 · 4인<br />커뮤니티
-              백엔드·배포 환경
-            </p>
-            <div class="project-body">
-              <ul>
-                <li>
-                  <a
-                    href="https://github.com/meongkk/daenggo-BE"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >DAENGGO GitHub 저장소 <span aria-hidden="true">↗</span></a
-                  >
-                </li>
-              </ul>
-              <figure class="project-visual">
-                <img
-                  class="mascot"
-                  src="assets/daenggo-dog.png"
-                  alt=""
-                  width="375"
-                  height="279"
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  DAENGGO · 멍크크 로그인 일러스트 ·
-                  <a
-                    href="https://github.com/meongkk/daenggo-FE/blob/dev/src/assets/LoginDog.png"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >이미지 원본</a
-                  >
-                </figcaption>
-              </figure>
-              <h3>반려견 커뮤니티 백엔드</h3>
-              <p>
-                게시글과 댓글이 단순히 저장되는 데서 끝나지 않고, 로그인한
-                사용자가 자신이 쓴 글만 수정·삭제할 수 있도록 인증 정보와 도메인
-                권한을 연결했습니다.
-              </p>
-              <h4>제가 맡은 범위</h4>
-              <ul>
-                <li>게시글·댓글 CRUD와 조회수 처리</li>
-                <li>게시글 이미지 등록·수정 흐름</li>
-                <li>
-                  Spring Security·JWT 사용자와 작성자를 비교하는 권한 검증
-                </li>
-                <li>임시 사용자 의존 제거와 JWT 연동 오류 수정</li>
-                <li>Docker Compose·Nginx 기반 통합 실행 환경 구성</li>
-              </ul>
-              <p>
-                초기 구현에서는 임시 사용자와 실제 JWT 사용자가 섞이면서 작성자
-                판정이 달라지는 문제가 있었습니다. 요청에서 임시 ID를 받는
-                방식을 제거하고, 인증 컨텍스트의 사용자만 기준으로 삼아 등록부터
-                수정·삭제까지 같은 신원 흐름을 사용하도록 정리했습니다.
-              </p>
-              <p>
-                DAENGGO는 CLUTCH처럼 정량 부하 테스트 수치를 만들지 않았습니다.
-                성능 수치를 추정해 넣지 않고, 구현 범위와 PR 기록만 근거로
-                남겼습니다.
-              </p>
-              <ul>
-                <li>
-                  <a
-                    href="https://github.com/meongkk/daenggo-BE/pulls?q=is%3Apr+author%3Aminggure"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >제가 작성한 DAENGGO PR
-                    <span aria-hidden="true">↗</span></a
-                  >
-                </li>
-              </ul>
-            </div>
-          </section>
           <section class="section" id="mingpark">
             <div class="project-heading"><h2>MINGPARK</h2></div>
             <p class="project-meta">
@@ -1588,12 +1524,90 @@
               </ul>
             </div>
           </section>
+          <section class="section" id="daenggo">
+            <div class="project-heading"><h2>DAENGGO</h2></div>
+            <p class="project-meta">
+              반려견 커뮤니티 서비스 &nbsp; / &nbsp; 2026.07 · 4인<br />팀장 /
+              커뮤니티 백엔드·배포 환경
+            </p>
+            <div class="project-body">
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/meongkk/daenggo-BE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >DAENGGO GitHub 저장소 <span aria-hidden="true">↗</span></a
+                  >
+                </li>
+              </ul>
+              <figure class="project-visual">
+                <img
+                  class="mascot"
+                  src="assets/daenggo-dog.png"
+                  alt=""
+                  width="375"
+                  height="279"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>
+                  DAENGGO · 멍크크 로그인 일러스트 ·
+                  <a
+                    href="https://github.com/meongkk/daenggo-FE/blob/dev/src/assets/LoginDog.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >이미지 원본</a
+                  >
+                </figcaption>
+              </figure>
+              <h3>반려견 커뮤니티 백엔드</h3>
+              <p>
+                4인 팀 프로젝트에서 팀장과 커뮤니티 백엔드·배포 환경 구성을
+                맡았습니다.
+              </p>
+              <p>
+                게시글과 댓글이 단순히 저장되는 데서 끝나지 않고, 로그인한
+                사용자가 자신이 쓴 글만 수정·삭제할 수 있도록 인증 정보와 도메인
+                권한을 연결했습니다.
+              </p>
+              <h4>제가 맡은 범위</h4>
+              <ul>
+                <li>게시글·댓글 CRUD와 조회수 처리</li>
+                <li>게시글 이미지 등록·수정 흐름</li>
+                <li>
+                  Spring Security·JWT 사용자와 작성자를 비교하는 권한 검증
+                </li>
+                <li>임시 사용자 의존 제거와 JWT 연동 오류 수정</li>
+                <li>Docker Compose·Nginx 기반 통합 실행 환경 구성</li>
+              </ul>
+              <p>
+                초기 구현에서는 임시 사용자와 실제 JWT 사용자가 섞이면서 작성자
+                판정이 달라지는 문제가 있었습니다. 요청에서 임시 ID를 받는
+                방식을 제거하고, 인증 컨텍스트의 사용자만 기준으로 삼아 등록부터
+                수정·삭제까지 같은 신원 흐름을 사용하도록 정리했습니다.
+              </p>
+              <p>
+                DAENGGO는 CLUTCH처럼 정량 부하 테스트 수치를 만들지 않았습니다.
+                성능 수치를 추정해 넣지 않고, 구현 범위와 PR 기록만 근거로
+                남겼습니다.
+              </p>
+              <ul>
+                <li>
+                  <a
+                    href="https://github.com/meongkk/daenggo-BE/pulls?q=is%3Apr+author%3Aminggure"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >제가 작성한 DAENGGO PR
+                    <span aria-hidden="true">↗</span></a
+                  >
+                </li>
+              </ul>
+            </div>
+          </section>
           <section class="closing" aria-label="마무리">
             <h2>코드와 개발 기록</h2>
-            <p>
-              프로젝트 코드와 문제를 해결해 온 과정을 GitHub와 블로그에
-              남깁니다.
-            </p>
+            <p>프로젝트 코드와 문제를 해결해 온 과정을 GitHub에 남깁니다.</p>
             <div class="closing-links">
               <a
                 class="button-link primary"
@@ -1601,15 +1615,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 >GitHub <span aria-hidden="true">↗</span></a
-              ><a
-                class="button-link"
-                href="https://minggure.tistory.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Tech Blog <span aria-hidden="true">↗</span></a
-              ><button class="button-link" type="button" id="print">
-                PDF로 저장 / 인쇄
-              </button>
+              >
             </div>
           </section>
         </main>
@@ -1660,9 +1666,6 @@
         closedDetails.forEach((detail) => (detail.open = false));
         closedDetails = [];
       });
-      document
-        .getElementById("print")
-        .addEventListener("click", () => window.print());
     </script>
   </body>
 </html>
