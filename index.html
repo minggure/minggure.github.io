@@ -339,11 +339,10 @@
         --soft: #f3f9e9;
       }
       .project-thumb {
-        grid-column: 1;
-        grid-row: 1/6;
-        align-self: start;
-        width: 160px;
-        height: 128px;
+        display: block;
+        width: 100%;
+        height: 160px;
+        margin-bottom: 16px;
         object-fit: contain;
         background: var(--soft);
       }
@@ -377,54 +376,42 @@
         text-underline-offset: 3px;
       }
       .projects-grid {
-        display: block;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
       }
       .project-card {
-        display: grid;
-        grid-template-columns: 160px minmax(0, 1fr);
-        column-gap: 24px;
-        padding: 24px 0;
-        border-bottom: 1px solid var(--line);
+        display: block;
         min-width: 0;
         transition: background 0.16s;
-      }
-      .project-card:first-child {
-        padding-top: 0;
-      }
-      .project-card:last-child {
-        border-bottom: 0;
-        padding-bottom: 0;
       }
       .project-card:hover {
         color: var(--ink);
         background: var(--soft);
       }
       .project-card h3 {
-        grid-column: 2;
         font-size: 22px;
-        margin: 0;
+        margin: 0 0 8px;
         letter-spacing: -0.015em;
         color: var(--accent);
       }
       .project-card p {
-        grid-column: 2;
         font-size: 16px;
         margin: 0 0 4px;
         line-height: 1.7;
       }
       .project-role {
-        grid-column: 2;
+        display: block;
         font-size: 14px;
         color: var(--muted);
       }
       .project-date {
-        grid-column: 2;
+        display: block;
         font-size: 13px;
         color: var(--muted);
         margin: 8px 0 0;
       }
       .card-result {
-        grid-column: 2;
         font-size: 14px;
         margin-top: 8px;
         line-height: 1.8;
@@ -565,28 +552,6 @@
       }
       details > p:last-child {
         margin-bottom: 24px;
-      }
-      .principles {
-        list-style: none;
-        padding: 0;
-      }
-      .principles li {
-        padding: 20px 0;
-        border-bottom: 1px solid var(--line);
-        margin: 0;
-      }
-      .principles li:last-child {
-        border-bottom: 0;
-      }
-      .principles strong {
-        display: block;
-        font-size: 18px;
-        margin-bottom: 6px;
-      }
-      .principles p {
-        font-size: 16px;
-        color: var(--muted);
-        margin: 0;
       }
       .closing {
         padding: 0 0 48px;
@@ -777,13 +742,13 @@
           padding-bottom: 32px;
           margin-bottom: 36px;
         }
-        .project-card {
-          display: block;
-          padding: 24px 0;
+        .projects-grid {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 32px;
         }
         .project-thumb {
           width: 100%;
-          height: 112px;
+          height: 160px;
           margin-bottom: 16px;
         }
         .project-card h3 {
@@ -946,6 +911,9 @@
             쿠폰 발급과 좌석 예매를 개발하며 동시성, 데이터 정합성, 장애 복구를
             다뤘습니다.
           </p>
+          <p class="hero-intro">
+            팀원과의 협업과 커뮤니케이션을 중요하게 생각합니다.
+          </p>
           <div class="hero-links">
             <a href="#projects"
               >프로젝트 보기 <span aria-hidden="true">↓</span></a
@@ -971,31 +939,53 @@
         <nav class="sidebar" aria-label="페이지 목차">
           <a href="#intro">소개</a>
           <a href="#education">학력</a>
+          <a href="#activity">활동·수상</a>
           <a href="#skills">기술</a>
           <a href="#projects">프로젝트</a>
           <a href="#clutch" class="sub">CLUTCH</a>
           <a href="#daenggo" class="sub">DAENGGO</a>
           <a href="#mingpark" class="sub">MINGPARK</a>
-          <a href="#activity">활동·수상</a>
-          <a href="#principles">개발 원칙</a>
         </nav>
         <main id="content">
           <section class="section intro" id="intro">
             <h2>소개</h2>
             <p>
-              팀 프로젝트에서는 API 요청값과 상태 변경 시점, 완료 기준을 먼저
-              맞추려 합니다. 서로 다르게 이해한 부분을 찾아 정리하고, 함께 만든
-              기능이 연결되는 과정에서 보람을 느낍니다.
+              팀 프로젝트에서는 API 요청값과 상태 변경 시점, 완료 조건을 먼저
+              맞춥니다. 서로 다르게 이해한 부분은 문서와 대화로 확인하고, 함께
+              만든 기능이 하나의 서비스로 연결되는 과정에서 보람을 느낍니다.
             </p>
             <p>
-              새로운 기술을 배울 때는 적용 이유를 설명하고, 로그와 테스트로
-              동작을 확인합니다.
+              새로운 기술은 필요한 이유를 이해하고 적용하려 합니다. 쿠폰 발급과
+              좌석 예매를 개발하면서 임시 선점과 최종 완료의 기준을 구분하고,
+              장애가 났을 때 어떤 데이터를 기준으로 복구할지도 함께
+              고민했습니다.
+            </p>
+            <p>
+              구현한 동작은 로그와 테스트로 확인합니다. 성능 결과를 공유할 때도
+              쿼리와 API 응답, 서버와 부하 발생기, 트래픽이 서서히 늘어나는
+              경우와 한꺼번에 몰리는 경우를 구분해 측정 조건과 결과를 함께
+              설명합니다.
             </p>
           </section>
           <section class="section" id="education">
             <h2>학력</h2>
             <h3>한신대학교 컴퓨터공학부</h3>
             <p class="project-meta">2024.03.01–2026.02.13 · 졸업</p>
+          </section>
+          <section class="section" id="activity">
+            <h2>활동과 수상</h2>
+            <h3>LG U+ URECA · Backend</h3>
+            <p>
+              Java와 Spring 기반 백엔드 개발, 데이터베이스, Redis·Kafka, Docker
+              환경을 학습하고 팀 프로젝트로 적용했습니다. 기능 구현 뒤에는
+              테스트 조건과 결과를 문서로 남기는 습관을 만들었습니다.
+            </p>
+            <h3>종합 프로젝트 우수상 · CLUTCH</h3>
+            <p>
+              경기 이벤트를 활용한 실시간 팬 참여 플랫폼 CLUTCH로 우수상을
+              받았습니다. 저는 선착순 쿠폰 발급의 동시성 제어, 장애 복구, 부하
+              검증과 관리자 통계 파이프라인을 담당했습니다.
+            </p>
           </section>
           <section class="section" id="skills">
             <h2>기술과 사용 경험</h2>
@@ -1033,13 +1023,18 @@
                   </tr>
                   <tr>
                     <td>Test &amp; Operation</td>
-                    <td>JUnit 5, k6, Docker Compose, Prometheus, Grafana</td>
+                    <td>JUnit 5, k6, Prometheus, Grafana</td>
                     <td>통합·동시성·장애·부하 테스트와 지표 분석</td>
                   </tr>
                   <tr>
                     <td>Realtime</td>
                     <td>SSE</td>
                     <td>쿠폰 재고와 이벤트 상태를 화면에 전달</td>
+                  </tr>
+                  <tr>
+                    <td>ETC</td>
+                    <td>Docker, Docker Compose</td>
+                    <td>컨테이너 기반 개발·통합 실행 환경 구성</td>
                   </tr>
                 </tbody>
               </table>
@@ -1592,58 +1587,6 @@
                 </li>
               </ul>
             </div>
-          </section>
-          <section class="section" id="activity">
-            <h2>활동과 수상</h2>
-            <h3>LG U+ URECA · Backend</h3>
-            <p>
-              Java와 Spring 기반 백엔드 개발, 데이터베이스, Redis·Kafka, Docker
-              환경을 학습하고 팀 프로젝트로 적용했습니다. 기능 구현 뒤에는
-              테스트 조건과 결과를 문서로 남기는 습관을 만들었습니다.
-            </p>
-            <h3>종합 프로젝트 우수상 · CLUTCH</h3>
-            <p>
-              경기 이벤트를 활용한 실시간 팬 참여 플랫폼 CLUTCH로 우수상을
-              받았습니다. 저는 선착순 쿠폰 발급의 동시성 제어, 장애 복구, 부하
-              검증과 관리자 통계 파이프라인을 담당했습니다.
-            </p>
-          </section>
-          <section class="section" id="principles">
-            <h2>제가 중요하게 보는 것</h2>
-            <ol class="principles">
-              <li>
-                <div>
-                  <strong>성공의 기준을 하나로 정합니다.</strong>
-                  <p>Redis 선점과 DB 발급 완료를 섞지 않습니다.</p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <strong>속도 수치에 측정 범위를 붙입니다.</strong>
-                  <p>
-                    Ramp와 Burst, 쿼리와 API, 서버와 부하 발생기를 구분합니다.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <strong>구현 전에 서로의 기준을 맞춥니다.</strong>
-                  <p>
-                    API 요청값과 상태 변경 시점, 완료 조건을 먼저 공유하고 다르게
-                    이해한 부분을 문서와 대화로 확인합니다.
-                  </p>
-                </div>
-              </li>
-              <li>
-                <div>
-                  <strong>장애 뒤의 상태를 설계합니다.</strong>
-                  <p>
-                    실패 응답만 처리하지 않고 어떤 데이터를 기준으로 복구할지
-                    정합니다.
-                  </p>
-                </div>
-              </li>
-            </ol>
           </section>
           <section class="closing" aria-label="마무리">
             <h2>코드와 개발 기록</h2>
