@@ -4,7 +4,7 @@
 
 - 사이트: https://minggure.github.io/
 - 원문: https://www.notion.so/3cf09199440481d99843ee97e7080b35
-- 구성: 자기소개, 기술, CLUTCH / DAENGGO / MINGPARK, 활동·수상, 개발 원칙
+- 구성: 자기소개, 학력, 기술, CLUTCH / DAENGGO / MINGPARK, 활동·수상, 개발 원칙
 - 외부 라이브러리나 빌드 없이 `index.html`을 브라우저에서 열면 됩니다.
 
 ## 프로필 사진
