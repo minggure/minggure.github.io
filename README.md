@@ -4,7 +4,7 @@
 
 - 사이트: https://minggure.github.io/
 - 원문: https://www.notion.so/3cf09199440481d99843ee97e7080b35
-- 구성: 자기소개, 기술, CLUTCH / MINGPARK / DAENGGO, 활동·수상, 개발 원칙
+- 구성: 자기소개, 기술, CLUTCH / DAENGGO / MINGPARK, 활동·수상, 개발 원칙
 - 외부 라이브러리나 빌드 없이 `index.html`을 브라우저에서 열면 됩니다.
 
 ## 프로필 사진
@@ -36,3 +36,16 @@ GitHub Pages는 `gh-pages` 브랜치의 `/` 경로를 게시합니다.
 수치와 역할은 제공된 노션 문서를 기준으로 옮겼습니다.
 CLUTCH의 20,000명 결과는 60초 Ramp 테스트이며, 쿼리 구간과 API 응답, 부하 발생기 네트워크 개선을 구분해 표기했습니다.
 MINGPARK와 DAENGGO에 확인되지 않은 성능 수치를 추가하지 않았습니다.
+
+## 프로젝트 이미지와 색상
+
+목차·요약 목록·상세 본문은 CLUTCH → DAENGGO → MINGPARK 순서입니다.
+
+| 프로젝트 | 이미지 출처 | 색상 |
+| --- | --- | --- |
+| CLUTCH | [README 로고](https://github.com/seok-cess/Clutch-BE/blob/9949870b036bf29ffd0edd999212a38cca142ed6/docs/assets/clutch-logo.png) | 로고의 보라색 |
+| DAENGGO | [로그인 일러스트](https://github.com/meongkk/daenggo-FE/blob/3d59590a59b7d3bad558ca233e9feef70b364206/src/assets/LoginDog.png) | 프론트의 주황색 브랜드 토큰 |
+| MINGPARK | [README 로고](https://github.com/minggure/Mingpark/blob/4584041fb995997fecea80ef8c70ef4369631f0a/src/main/resources/static/images/mingpark-logo.png) | 로고의 연두색 |
+
+DAENGGO의 README에는 대표 이미지가 없어 실제 프론트엔드 로그인 일러스트를 사용했습니다. README의 서비스명은 멍크크이며, 포트폴리오의 프로젝트명 DAENGGO를 유지했습니다.
+이미지는 `assets/`에 원본 그대로 보관합니다. 링크와 제목에는 흰 배경에서 읽기 쉬운 진한 색조를 적용하고 본문 색은 유지합니다.
